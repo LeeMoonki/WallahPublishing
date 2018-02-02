@@ -1,0 +1,10 @@
+/* reset css that is useful for me or need to store */
+
+a {
+	text-decoration: none;
+}
+
+input {
+	border: 1px solid #dedede;
+	vertical-align: middle;
+}
