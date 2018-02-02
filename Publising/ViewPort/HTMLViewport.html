@@ -1,0 +1,36 @@
+<!--
+    뷰포트 속성
+    width           |   device-width, 양수    |   뷰포트의 너비를 지정
+    height          |   device-height, 양수   |   뷰포트의 높이를 지정
+    initial-scale   |   양수                  |   뷰포트의 초기 배율을 지정. 기본값은 1이며 1보다 작은 값을 사용하면 축소된 페이지를 표시하고 1보다 큰 값을 사용하면 확대된 페이지를 표시한다.
+    user-scalable   |   yes, no              |    뷰포트의 확대/축소 여부를 지정한다. 기본값은 yes. 반대로 no로 설정하면 사용자가 페이지를 확대할 수 없다.
+    minimum-scale   |   양수                  |   뷰포트의 최소 축소 비율을 지정한다. 기본값은 0.25
+    maximum-scale   |   양수                  |   뷰포트의 최대 확대 비율을 지정한다. 기본값은 5.0  
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta charset="utf-8">
+        <title></title>
+        
+        <style>
+            /* 표준방식의 viewport 사용 방법 */
+            @viewport {
+                width: device-width; /* width 속성과 동일 */
+                zoom: 1; /* initial-scale 속성과 동일 */
+                min-zoom: 1; /* minimum-scale 속성과 동일 */
+                max-zoom: 1; /* maximum-scale 속성과 동일 */
+                user-zoom: zoom; /* user-scalable 속성과 동일 */
+            }
+            /* 자세한 내용은 다음을 참조 http://goo.gl/FSTGbn */
+        </style>
+
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            
+        </script>
+    </body>
+</html>
