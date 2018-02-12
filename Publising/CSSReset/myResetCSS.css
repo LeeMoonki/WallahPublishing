@@ -1,6 +1,7 @@
 /* reset css that is useful for me or need to store */
 
 a {
+	color: inherit;
 	text-decoration: none;
 }
 
