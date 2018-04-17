@@ -1,0 +1,39 @@
+<!--
+    이미지의 비율대로 조절할 때
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            #img_wrap { margin:30px auto 0;width:960px; }
+            #img { width:100%; } /* gecko.jpg : width: 960px, height: 640px */
+            #img2 { display:block;margin:30px auto 0;width:960px;height:60%; }
+            #img3 { display:block;margin:30px auto 0;width:960px;height:640px; }
+            
+            @media only screen and (max-width: 1023px) {
+                #img_wrap { width:80%; }
+                #img2 { width:80%; }
+                #img3 { width:80%; }
+            }
+
+            
+            @media only screen and (max-width: 767px) {
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div id="img_wrap">
+            <img id="img" src="../../imgs/gecko.jpg" >
+        </div>
+        <img id="img2" src="../../imgs/gecko.jpg">
+        <img id="img3" src="../../imgs/gecko.jpg">
+
+        <script type="text/javascript">
+            
+        </script>
+    </body>
+</html>
