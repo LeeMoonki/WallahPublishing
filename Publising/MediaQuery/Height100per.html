@@ -1,0 +1,41 @@
+<!--
+    
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            /* html과 body를 아래와 같이 세팅해야 하위 wrap의 height:100% 를 통해 화면을 가득 채울 수 있다. */
+            html { height:100%; }
+            body { margin:0;padding:0;height:100%; }
+            #wrap { overflow:auto;width:100%;height:100%;background-color:#029fca;text-align:center; }
+
+            /* 이렇게 가득 채운 바탕은 내용이 변하더라도 바탕을 가득 채운다 */
+            #btn_span, #btn_reduce { display:inline-block;margin:10px auto 0;width:50px;height:25px;background-color:#fff;border:1px solid black;font-size:8pt;cursor:pointer; }
+            #btn_reduce { margin-left:10px; }
+            #content { margin:50px auto;width:300px;height:300px;border:1px solid black;background-color:#fff; }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <button id="btn_span">늘리기</button><button id="btn_reduce">줄이기</button>
+            <div id="content">
+
+            </div>
+        </div>
+        <script type="text/javascript">
+            var eleContent = document.getElementById("content");
+            document.getElementById("btn_span").addEventListener("click", function(e){
+                eleContent.style.height = "600px";
+            },
+            false);
+            document.getElementById("btn_reduce").addEventListener("click", function(e){
+                eleContent.style.height = "300px";
+            },
+            false);
+        </script>
+    </body>
+</html>
