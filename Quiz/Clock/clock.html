@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            .circle { position:relative;width:300px;height:300px;border-radius:50%;background-color:#e4e4e4; }
+            #sec { position:absolute;top:50%;width:50%;border:1px solid #000;transform-origin:100% 50%; }
+            /* #hour { position:absolute;top:50%;width:50%;border:1px solid #000;transform-origin:100% 50%; } */
+        </style>
+    </head>
+    <body>
+        <div class="circle">
+          <div id="hour"></div>
+          <div id="min"></div>
+          <div id="sec"></div>
+          <div id="digit"></div>
+        </div>
+
+        <script type="text/javascript">
+            var digit = document.getElementById("digit");
+            var secEle = document.getElementById("sec");
+            var sec = 0;
+            sec = new Date().getSeconds();
+
+            rotate();
+            while (true) {
+                if (sec != new Date().getSeconds()) {
+                    var rotateInterval = setInterval(rotate, 1000);
+                    break;
+                }
+            }
+            
+            function rotate() {
+                var time = new Date();
+
+                digit.innerHTML = new Date().getSeconds() + "";
+                secEle.style.transform = "rotate(" + ((90 + (time.getSeconds() * 6)) % 360) + "deg)";
+            }
+        </script>
+    </body>
+</html>
