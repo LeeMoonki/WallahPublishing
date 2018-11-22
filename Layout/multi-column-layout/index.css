@@ -1,0 +1,20 @@
+.container {
+    width: 600px;
+    column-width: 180px;
+}
+.container1 {
+    width: 600px;
+    column-count: 4;
+}
+
+.container-column-gap {
+    width: 600px;
+    column-width: 180px;
+    column-gap: 30px;
+}
+
+.container-column-gap1 {
+    width: 600px;
+    column-width: 180px;
+    column-gap: 31px;
+}

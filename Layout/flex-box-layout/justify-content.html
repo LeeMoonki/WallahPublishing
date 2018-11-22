@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            .container {
+                width:1000px;
+                background-color: #dedede;
+                display: flex;
+                flex-direction: row;
+                margin-top:10px;
+            }
+            .flex-start { justify-content: flex-start; } /* default */
+            .flex-end { justify-content: flex-end; }
+            .center { justify-content: center; }
+            .space-between { justify-content: space-between; }
+            .space-around { justify-content: space-around; }
+            .box {
+                width: 200px;
+                height:100px;
+                background-color:#000;
+                border:1px solid #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container flex-start">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="container flex-end">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="container center">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="container space-between">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="container space-around">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <script type="text/javascript">
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            .container {
+                width:1000px;
+                height:250px;
+                background-color: #dedede;
+                display: flex;
+                flex-direction: row;
+                margin-top:10px;
+            }
+            .stretch { align-items: stretch; } /* default */
+            .flex-start { align-items: flex-start; } 
+            .flex-end { align-items: flex-end; }
+            .center { align-items: center; }
+            .baseline { align-items: baseline; }
+            .box {
+                width: 200px;
+                max-height: 235px;
+                background-color:#000;
+                border:1px solid #fff;
+                color:#fff;
+            }
+            .align-self {
+                align-self: flex-end;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>stretch</h3>
+        <div class="container stretch">
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            </div>
+            <div class="box">
+                Lorem Ipsum 
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+        </div>
+        <h3>flex-start</h3>
+        <div class="container flex-start">
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            </div>
+            <div class="box">
+                Lorem Ipsum 
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+        </div>
+        <h3>flex-end</h3>
+        <div class="container flex-end">
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            </div>
+            <div class="box">
+                Lorem Ipsum 
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+        </div>
+        <h3>center</h3>
+        <div class="container center">
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            </div>
+            <div class="box">
+                Lorem Ipsum 
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+        </div>
+        <h3>baseline</h3>
+        <div class="container baseline">
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            </div>
+            <div class="box">
+                Lorem Ipsum 
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+        </div>
+        <h3>align-self : 항목들 중 하나를 다른 항목들과 다르게 정렬하고자 하는 경우</h3>
+        <div class="container strech">
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            </div>
+            <div class="box">
+                Lorem Ipsum 
+            </div>
+            <div class="box">
+                Lorem Ipsum is simply dummy text of the printing
+            </div>
+            <div class="box align-self">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+        </div>
+        <script type="text/javascript">
+            
+        </script>
+    </body>
+</html>
