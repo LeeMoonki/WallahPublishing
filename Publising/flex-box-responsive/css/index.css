@@ -1,0 +1,22 @@
+@media all and (min-width: 480px) {
+    /* 모바일용 미디어 쿼리는 별도로 작성하지 않는다. 만약 웹사이트에 모바일용 미디어 쿼리 조건문을 작성하면 */
+    /* 해당 해상도 이하의 기기로 웹사이트를 접속할 경우 조건문 때문에 웹사이트의 구조가 전부 엉망이 되어버리기 때문이다. */
+    /* 따라서 반응형 웹을 제작할 때는 모바일용 미디어 쿼리는 별도로 작성하지 않은 상태로 모바일용에 적용될 구조 css 코드와 모든 해상도에서 공통적으로 적용될 CSS 코드를 함께 작성한다. */
+}
+
+/* 모바일, 기본 */
+#wrap { display:flex;flex-flow:column nowrap;width:80%;margin:0 auto;max-width:1200px; }
+#wrap section { box-sizing:border-box; }
+/* // 모바일, 기본 */
+
+/* 태블릿: 767px 이상 */
+@media all and (min-width: 767px) {
+    #wrap { flex-flow:row wrap; }
+}
+/* // 태블릿 */
+
+/* PC: 1023px 이상 */
+@media all and (min-width: 1023px) {
+    #wrap { position:relative;width:90%; }
+}
+/* // PC */

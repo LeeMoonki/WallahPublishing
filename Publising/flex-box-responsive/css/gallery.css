@@ -1,0 +1,15 @@
+/* 모바일, 기본 */
+#wrap { display:flex;flex-flow:column nowrap;width:80%;margin:0 auto;max-width:1200px; }
+#wrap section { box-sizing:border-box; }
+/* // 모바일, 기본 */
+
+/* 태블릿: 767px 이상 */
+@media all and (min-width: 767px) {
+}
+/* // 태블릿 */
+
+/* PC: 1023px 이상 */
+@media all and (min-width: 1023px) {
+    #wrap { position:relative;width:90%; }
+}
+/* // PC */
