@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>inline-link</title>
+
+  <style>
+    html {
+      font-size: 100%;
+    }
+    p a {
+      /* 이렇게 해서 underline이 텍스트와 엉키지 않도록 한다. */
+      text-decoration: none;
+      text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
+        0 0.05em 0 #fff, 0 -0.05em 0 #fff,
+        0.1em 0 0 #fff, -0.1em 0 0 #fff,
+        0 0.1em 0 #fff, 0 -0.1em 0 #fff;
+      background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+      background-repeat: repeat-x;
+      background-position: bottom 0.2em center; /* 두 번째 값(첫 번째 값의 offset)을 조절하여 underline의 위치를 설정할 수 있다. */
+      background-size: 100% 0.05em;
+    }
+    p a:focus {
+      /* focus 동작에 대해 아웃라인 보다는 배경색을 지정해주는게 더 효과적일 수 있다. */
+      outline: none;
+      background-color: #ddd;
+      text-shadow: 0.05em 0 0 #ddd, -0.05em 0 0 #ddd,
+        0 0.05em 0 #ddd, 0 -0.05em 0 #ddd,
+        0.1em 0 0 #ddd, -0.1em 0 0 #ddd,
+        0 0.1em 0 #ddd, 0. -0.1em 0 #ddd;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    Hello World! <a tabindex="1" href="https://google.com">Go to Google!</a><br>
+    Hello Pub! <a tabindex="2" href="https://naver.com">Go to Naver!</a>
+  </p>
+</body>
+</html>

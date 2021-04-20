@@ -29,6 +29,13 @@
       /* 특정 언어를 위한 폰트를 지원 */
       font-size: 12px;
     }
+
+    @media print {
+      /* 프린트를 할 땐 main 영역을 제외한 영역은 보여주지 않는다. */
+      body > *:not(main) {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
