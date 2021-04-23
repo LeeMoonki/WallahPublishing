@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>headings and sections1</title>
+</head>
+<body>
+  <h1>Foo</h1>
+  <h2>Bar</h2>
+  <blockquote>
+    <h3>Bla</h3>
+  </blockquote>
+  <p>Baz</p>
+  <h2>Quux</h2>
+  <section>
+    <h3>Thud</h3>
+  </section>
+  <p>Grunt</p>
+</body>
+<!-- 위 구조는 다음과 같이 됩니다. -->
+<!--
+  1. Foo : body section의 heading이고 <p>Grunt</p>를 포함합니다.
+    1. Bar : <p>Baz</p>를 포함하고 암시적 section을 시작하는 heading 입니다.
+    2. Quux : 암시적 section을 시작하는 heading 입니다. 아무 content도 없습니다.
+    3. Thud : 명시적 <section> 요소인 section의 heading 입니다.
+-->
+</html>
