@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Viewport</title>
+</head>
+<body>
+  <h1>Hi viewport!!</h1>
+  <p style="white-space: pre-line;">
+    뷰포트를 적용하지 않으면 데스크탑을 기준으로 개발한 웹 페이지가 모바일 브라우저 안에 전부 보여주기 위해 요소들의 배율이 축소된다.
+    예를 들어, Safari에서 사용하는 브라우저 엔진(Webkit)의 기본 뷰포트가 980px이고 iOS의 Safari 브라우저의 너비가 320px이라면 980px의 웹 페이지를 320px에 보여주기 위해 배율이 축소된다.
+    즉, web과 iOS의 Safari는 모두 Webkit을 사용한다. Webkit의 기본 뷰포트는 980px이다. 하지만 iOS 브라우저의 너비는 320px(브라우저의 크기를 iOS 디바이스에 맞춰 줄인다고 생각해보자)이다. 따라서 320px인 모바일에 980px의 페이지를 보여주니 크기가 작아지는 것.
+    따라서 브라우저에게 현재 viewport(보여주는 영역)의 너비가 얼마인지 알려줘야 한다. 여기에서 viewport의 <strong>width</strong>라는 값이 그 역할을 한다. <strong>device-width</strong>는 우리가 모든 디바이스의 px을 알 필요가 없도록 친절하게 알려주는 역할을 한다.
+  </p>
+</body>
+</html>
