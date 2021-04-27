@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>article</title>
+</head>
+<body>
+  <h1>article</h1>
+  <p>
+    article은 완전히 독립적으로 다른 곳에 배포되고 재사용될 수 있는 요소입니다. 즉, 전혀 다른 페이지에 가져다 사용해도 독립성이 유지돼야 합니다. article안에 article 요소를 중첩해서 사용한다면 내부 article 요소는 외부 article 요소와 관련이 있어야 합니다.
+    <strong>주의해야 할 사항은 내부 article에 작성된 <a href="./address.html">address</a> 요소는 외부 article에 적용됩니다.</strong>
+  </p>
+
+  <!-- 예시 -->
+  <article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 itemprop="headline">The Very First Rule of Life</h1>
+      <p><time itemprop="datePublished" datetime="2009-10-09">3 days ago</time></p>
+      <link itemprop="url" href="?comments=0">
+    </header>
+    <p>If there's a microphone anywhere near you, assume it's hot and
+    sending whatever you're saying to the world. Seriously.</p>
+    <p>...</p>
+    <section>
+      <h1>Comments</h1>
+      <article itemprop="comment" itemscope itemtype="http://schema.org/UserComments" id="c1">
+        <link itemprop="url" href="#c1">
+        <footer>
+          <p>Posted by: <span itemprop="creator" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name">George Washington</span>
+          </span></p>
+          <p><time itemprop="commentTime" datetime="2009-10-10">15 minutes ago</time></p>
+        </footer>
+        <p>Yeah! Especially when talking about your lobbyist friends!</p>
+      </article>
+      <article itemprop="comment" itemscope itemtype="http://schema.org/UserComments" id="c2">
+        <link itemprop="url" href="#c2">
+        <footer>
+          <p>Posted by: <span itemprop="creator" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name">George Hammond</span>
+          </span></p>
+          <p><time itemprop="commentTime" datetime="2009-10-10">5 minutes ago</time></p>
+        </footer>
+        <p>Hey, you have the same first name as me.</p>
+      </article>
+    </section>
+  </article>
+</body>
+</html>
