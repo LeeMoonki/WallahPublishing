@@ -8,6 +8,16 @@
   - 기본적인 html 세팅
 - [viewport](./viewport.html)
   - viewport에 대하여
+
+### content의 종류
+- [metadata content](./kinds-of-content/metadata-content.html)
+- [flow content](./kinds-of-content/flow-content.html)
+- [sectioning content](./kinds-of-content/sectioning-content.html)
+- [heading content](./kinds-of-content/heading-content.html)
+- [phrasing content](./kinds-of-content/phrasing-content.html)
+- [embedded content](./kinds-of-content/embedded-content.html)
+- [interactive content](./kinds-of-content/interactive-content.html)
+
 ### section
 - [address](./section/address.html)
 - [article](./section/article.html)
