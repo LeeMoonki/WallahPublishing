@@ -2,12 +2,22 @@
 다음을 참고하여 작성하고 응용 했습니다.
 - [HTML Living Standard](https://html.spec.whatwg.org/multipage/)
 - [인클루시브 디자인 패턴 - 접근성 있는 웹디자인하기, 헤이던 피커링 지음, 이태상 옮김, webactually](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791185885247&orderClick=LEa&Kc=)
+<br>
+- [Markup 검증 서비스](https://validator.kldp.org)
+- [HTML 5 Outliner](https://gsnedders.html5.org/outliner)
 
 ## 링크들
 - [document](./document.html)
   - 기본적인 html 세팅
 - [viewport](./viewport.html)
   - viewport에 대하여
+
+### text
+- [inclusive 링크](./text/inline-link.html)
+- [em, strong](./text/em-strong.html)
+- [i](./text/i.html)
+- [small](./text/small.html)
+- [span](./text/span.html)
 
 ### content의 종류
 - [metadata content](./kinds-of-content/metadata-content.html)
