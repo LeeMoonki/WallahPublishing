@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>visually-hidden</title>
+
+  <style>
+    /*
+      display: none;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+
+      위 스타일들은 시각적, 청각적으로 요소를 무효로 만들어버립니다.
+      따라서 다음과 같은 스타일을 적용해 시각적, 청각적으로 유효한 숨기는 기능을 사용합니다.
+    */
+    .visually-hidden {
+      position: absolute;
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>visually-hidden</h1>
+  <div class="box visually-hidden"></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hidden</title>
+
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #ddd;
+    }
+    .box-with-display {
+      display: flex;
+      width: 100px;
+      height: 100px;
+      background-color: #ddd;
+    }
+
+    /* hidden 속성을 지원하지 않는 브라우저에서 동작하게 하기 위한 스타일 */
+    [hidden]:not(.box-with-display) {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>hidden</h1>
+  <div id="hidden-box" class="box" hidden>hidden box</div>
+  <div class="box" style="display: flex;" hidden></div>
+  <div class="box-with-display" hidden></div>
+  <p>hidden 속성을 추가하면 시각적, 청각적 방식 등 모든 방식에서 숨겨집니다.</p>
+  <p>hidden된 요소에 스크립트로 접근할 수 있습니다.</p>
+  <p>하지만 hidden된 요소에 접근하는 href는 유효하지 않습니다.</p>
+
+  <script>
+    const $hiddenBox = document.getElementById('hidden-box');
+
+    console.log($hiddenBox, $hiddenBox.textContent);
+  </script>
+</body>
+</html>
