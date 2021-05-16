@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hijacking</title>
+
+  <style>
+    .content-box {
+      margin-top: 1.5rem;
+      width: 100px;
+      height: 1000px;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>hijacking</h1>
+  <nav>
+    <ul>
+      <li><a href="#first">first</a></li>
+      <li><a href="#second">second</a></li>
+      <li><a href="#third">third</a></li>
+      <li><a href="#forth">forth</a></li>
+      <li><a href="https://naver.com/#forth">anothre page</a></li>
+    </ul>
+  </nav>
+  <p></p>
+  <section id="first" class="content-box">
+    <h2>First</h2>
+    <p></p>
+  </section>
+  <section id="second" class="content-box">
+    <h2>Second</h2>
+    <p></p>
+  </section>
+  <section name="third" class="content-box">
+    <h2>Third</h2>
+    <p></p>
+  </section>
+
+  <script type="text/javascript" src="../js/delegate.js"></script>
+  <script type="text/javascript" src="../js/animateValue.js"></script>
+  <script type="text/javascript">
+    delegate(document.body, 'click', 'a[href*="#"]:not([href="#"])', (function () {
+      const fragmentRegex = /#[^#]+$/;
+
+      return function ({ event }) {
+        if (location.href.replace(fragmentRegex, '') !== this.href.replace(fragmentRegex, '')) {
+          // 이동하려는 페이지가 다르면 스크롤링 하지 않습니다.
+          return;
+        }
+
+        const id = this.hash.slice(1); // a[href*="#"]:not([href="#"]) 이기 때문에 반드시 존재
+        const $fragmentTarget = document.getElementById(id) || document.querySelector(`[name="${id}"]`);
+
+        if (!$fragmentTarget) {
+          // 이동할 요소가 없으면 스크롤링 하지 않습니다.
+          return;
+        }
+
+        event.preventDefault();
+
+        animateValue({
+          start: document.documentElement.scrollTop || document.body.scrollTop,
+          end: $fragmentTarget.offsetTop,
+          duration: 1000,
+          onProgress: (scrollTop) => {
+            document.documentElement.scrollTop = scrollTop;
+          },
+          onEnd: () => {
+            location.hash = $fragmentTarget.id || $fragmentTarget.getAttribute('name');
+          },
+        });
+      };
+    })());
+  </script>
+</body>
+</html>
