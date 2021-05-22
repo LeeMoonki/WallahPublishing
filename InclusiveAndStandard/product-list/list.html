@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product List</title>
+
+  <style>
+    .visually-hidden {
+      position: absolute;
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+    }
+    a.link-like-button {
+      padding: .5rem 1rem;
+      color: #232323;
+      text-decoration: none;
+      border: 1px solid #232323;
+      border-radius: .25rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Product List</h1>
+  <ul>
+    <li>
+      <h3>Apple mug cup</h3>
+      <!-- <img
+        srcset="
+          https://via.placeholder.com/200x200 200w,
+          https://via.placeholder.com/250x250 250w,
+          https://via.placeholder.com/300x300 300w"
+        sizes="(max-width: 700px) 300px, (max-width: 1000px) 270px, 180px"
+        src="../../imgs/apple-mug/apple-mug@200.jpeg"
+        alt="흰색 배경에 검은색 애플의 로고가 새겨져 있는 머그컵" /> -->
+      <picture>
+        <source media="(max-width: 700px)" srcset="https://via.placeholder.com/200x200" />
+        <source media="(max-width: 1000px)" srcset="https://via.placeholder.com/250x250" />
+        <img src="https://via.placeholder.com/300x300" alt="흰색 배경에 검은색 애플의 로고가 새겨져 있는 머그컵" loading="lazy" />
+      </picture>
+      <dl>
+        <dt>가격:</dt>
+        <dd>100,000</dd>
+        <dt>제조사:</dt>
+        <dd>몰라요</dd>
+        <dt>평가</dt>
+        <dd>
+          <!-- png보단 svg가 더 적절하다 -->
+          <!-- alt=""를 적용하면 스크린 리더가 이미지를 무시한다 -->
+          <img src="../../imgs/stars/star_4_5.png" alt="" />
+          별 5개 중 4개
+        </dd>
+      </dl>
+      <a class="link-like-button" href="https://www.google.com">
+        <span class="visually-hidden">Apple mug cup을 </span>
+        바로구매
+      </a>
+    </li>
+  </ul>
+  <p>상품의 정보를 나열할 때 &lt;dl&gt;을 사용하면 &lt;ul&gt;과 같이 열거된다. 또한 스크린 리더에 의해 Definition list라고 읽히면서 키-값 쌍을 예측하도록 하기도 한다.</p>
+  <p>또한 &lt;dd&gt;는 CSS가 없을 때 들여쓰기가 되어있어 계층을 나타내기에 적절하다.</p>
+  <br>
+  <p>접근성과 비접근성, 포괄과 배제 사이의 차이를 만드는 것은 텍스트 자체다. 즉, alt가 있냐 없냐가 아니다.</p>
+  <p>별점의 경우 alt=""를 적용했는데 이는 중복 설명을 피하기 위함이므로 적절하다.</p>
+  <p>추가적으로 alt는 맥락에 의해 결정 돼야 한다. 즉, 이미지가 현재 페이지나 맥락의 의미에 기여하는지 확인해야 한다. 그리고 그 기여하는 내용을 alt에 적어준다.</p>
+  <p>만약 Apple mug cup에 대해 기여하는 상품 이미지를 선택했다면 alt에도 그러한 내용을 적어야 한다(alternate).</p>
+  <br>
+  <p>source의 media 속성을 사용해 뷰포트에 적절한 이미지를 사용할 수 있다. 이렇게 함으로써 작은 화면의 경우, 네트워크 비용을 아낄 수 있다.</p>
+  <p>
+    lazy loading에 대해선 다음 내용 참고.
+    <a href="https://stackoverflow.com/questions/24025464/lazy-loading-html5-picture-tag" target="_blank" rel="noopener noreferrer">Lazy Loading HTML5 picture tag</a>,
+    <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#htmlpictureelement" target="_blank" rel="noopener noreferrer">The picture element's Note</a>.
+  </p>
+  <br>
+  <p>바로구매의 경우 자주 마주치는 문제를 드러낸다. 바로 링크이지만 버튼처럼 생긴 요소다. 그런 경우에는 링크라는 신호를 보여주기위해 적절한 아이콘을 넣어주는 것도 좋다. 또는 버튼과 다른 스타일을 적용하는 것도 좋다. 이땐 a 요소에만 적용될 수 있도록 클래스 선택자 앞에 a를 붙여준다.</p>
+  <p>또한 링크이기 때문에 pointer cursor가 자동으로 적용된다. 참고로 덧붙이자면 버튼에는 pointer cursor를 적용하지 않는게 표준에 맞다. <a href="https://adamsilver.io/blog/buttons-shouldnt-have-a-hand-cursor" target="_blank" rel="noopener noreferrer">Buttons shouldn't have a hand cursor</a>.</p>
+  <p>모든 제품의 링크는 '바로구매'라는 동일한 내용을 담고있어 구분되지 않는다. 따라서 시각적으로 감추어진 설명을 링크에 추가하면 검색엔진의 가시성(visibility)를 높인다(<a href="https://developers.google.com/search/blog/2008/10/importance-of-link-architecture" target="_blank" rel="noopener noreferrer">Importance of link architecture</a>).</p>
+  <p></p>
+</body>
+</html>
