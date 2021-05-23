@@ -12,12 +12,21 @@
 - [viewport](./viewport.html)
   - viewport에 대하여
 
+### grouping
+- [dl, dt, dd](./grouping/dl-dt-dd.html)
+- [hr](./grouping/hr.html)
+- [p](./grouping/p.html)
+- [pre](./grouping/pre.html)
+
 ### text
+- [code](./text/code.html)
+- [dfn](./text/dfn.html)
 - [inclusive 링크](./text/inline-link.html)
 - [em, strong](./text/em-strong.html)
 - [i](./text/i.html)
 - [small](./text/small.html)
 - [span](./text/span.html)
+- [time](./text/time.html)
 
 ### content의 종류
 - [metadata content](./kinds-of-content/metadata-content.html)

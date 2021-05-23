@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dl, dt, dd</title>
+</head>
+<body>
+  <h1>dl, dt, dd(description list, description term, description)</h1>
+  <p>&lt;dl&gt;은 키-값 쌍으로 이루어진 관련 정보 리스트를 나타낸다.</p>
+  <p>&lt;dt&gt;는 그 자체로 정의된 용어를 의미하진 않는다. 그런 의미로 사용하고자 한다면 <a href="../text/dfn.html">&lt;dfn&gt;</a>을 사용한다.</p>
+  <p>&lt;dl&gt;과 &lt;dt&gt;를 그룹핑하기 위해 &lt;div&gt; 요소를 사용할 수 있다.</p>
+  <br>
+  <h2>두 용어에 대한 한 설명(정의)</h2>
+  <dl>
+    <dt lang="ko"><dfn>사탕</dfn></dt>
+    <dt lang="en"><dfn>캔디</dfn></dt>
+    <dd>달콤한 간식.</dd>
+  </dl>
+  <h2>한 용어에 대한 여러 설명(정의). 사전.</h2>
+  <dl>
+    <dt lang="ko"><dfn>행복</dfn></dt>
+    <dd>행복</dd>
+    <dd>명사</dd>
+    <dd>행복한 상태</dd>
+    <dd>운이 좋음. 성공.</dd>
+  </dl>
+  <h2>안내사항을 나열할 수도 있다.</h2>
+  <p>Determine the victory points as follows (use the
+  first matching case):</p>
+  <dl>
+    <dt> If you have exactly five gold coins </dt>
+    <dd> You get five victory points </dd>
+    <dt> If you have one or more gold coins, and you have one or more silver coins </dt>
+    <dd> You get two victory points </dd>
+    <dt> If you have one or more silver coins </dt>
+    <dd> You get one victory point </dd>
+    <dt> Otherwise </dt>
+    <dd> You get no victory points </dd>
+  </dl>
+</body>
+</html>
